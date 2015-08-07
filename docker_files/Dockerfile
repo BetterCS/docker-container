@@ -23,6 +23,8 @@ RUN       (echo "#!/bin/sh\ncd /etc/service/steamcmd\n./steamcmd.sh +runscript s
 # Creates server as a service
 ADD        ./run_server.sh /etc/service/steamcmd/run
 RUN       chmod +x ./run
+COPY      scripts /root/mounted/csgo/scripts
 
 # Cleans up APT when done.
+RUN        apt-get install unzip wget
 RUN        apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
