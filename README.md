@@ -27,8 +27,8 @@ Configure your `steamcmd.cmd` to run your dedicated server.
 ## Install it
 
 ```bash
-git clone https://github.com/Micka33/docker-steam.git
-cd docker-steam
+git clone https://github.com/BetterCS/docker-container.git
+cd docker-container
 sudo docker build -t mysteamserver ./docker_files
 ```
 
